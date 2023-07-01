@@ -1,0 +1,30 @@
+<h2 class="text-center"><u>Product List</u></h2>
+<div class="container">
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Product Type</th>
+            <th>Name</th>
+            <!-- <th>Stock</th>
+            <th>Price</th>
+            <th>Status</th> -->
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.id}}</td>
+            <td>{{product.productType}}</td>
+            <td>{{product.name}}</td>
+            <!-- <td>{{product.stock}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.status}}</td> -->
+            <td><button class="btn btn-info" (click)="viewProduct(product.id)" >View</button></td>
+            <td><button class="btn btn-primary" (click)="updateProduct(product.id)" >Edit</button></td>
+            <td><button class="btn btn-danger" (click)="disableProduct(product.id,product)">Disable</button></td>
+
+        </tr>
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,151 @@
+<h2 class="text-center"><u>Register User</u></h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="container">
+       
+            <div for="firstname" class="form-group">
+                <label>Name:</label>
+                <input formControlName="name" type="text" class="form-control" id="name" name="name"
+                    [(ngModel)]="user.name">
+
+                    <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['name'].errors &&  f['name'].errors['required'] ">
+                            Name is mandatory**
+                        </div>
+                        <div *ngIf="f['name'].errors &&  f['name'].errors['minlength'] ">
+                            Minimum length must be 2 characters**
+                        </div>
+                    </div>
+
+                    
+            </div>
+            
+            <div for="email" class="form-group">
+                <label>Email:</label>
+                <input formControlName="email" type="email" class="form-control" id="email" name="email"
+                    [(ngModel)]="user.emailAddress">
+                    <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['email'].errors &&  f['email'].errors['required'] ">
+                            Email is mandatory**
+                        </div>
+                        <div *ngIf="f['email'].errors &&  f['email'].errors['email'] ">
+                            Please enter the correct email**
+                        </div>
+                    </div>
+            </div>
+           
+        
+        
+       
+        <div class="form-group">
+            <label >Phone Number:</label>
+            <input formControlName="cont" type="tel" class="form-control" id="contact" name="contact" [(ngModel)]="user.phone">
+            <div *ngIf="f['cont'].touched && f['cont'].invalid" class="alert alert-danger">
+                <div *ngIf="f['cont'].errors &&  f['cont'].errors['required'] ">
+                    Phone number is mandatory**
+                </div>
+                <div *ngIf="f['cont'].errors &&  f['cont'].errors['minlength'] ">
+                    Minimum length must be 10 characters**
+                </div>
+                <div *ngIf="f['cont'].errors &&  f['cont'].errors['maxlength'] ">
+                    Maximum length must be 10 characters**
+                </div>
+                <div *ngIf="f['cont'].errors &&  f['cont'].errors['pattern'] ">
+                   Enter valid phone number**
+                </div>
+            </div>
+        </div>
+       
+        <div class="form-group">
+            <label>Password:</label>
+            <input formControlName="password" type="password" class="form-control" id="password" name="password" 
+            [(ngModel)]="user.password">
+           
+            <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">
+                <div *ngIf="f['password'].errors &&  f['password'].errors['required'] ">
+                    Password is mandatory**
+                </div>
+                <div *ngIf="f['password'].errors &&  f['password'].errors['minlength'] ">
+                    Minimum length must be 3 characters**
+                </div>
+            </div>
+        </div>
+
+            <div class="form-group">
+                <label>Building:</label>
+                <input formControlName="building" type="text" class="form-control" id="building" name="building" 
+                [(ngModel)]="user.address.building">
+
+                <div *ngIf="f['building'].touched && f['building'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['building'].errors &&  f['building'].errors['required'] ">
+                        Building is mandatory**
+                    </div>
+                    <div *ngIf="f['building'].errors &&  f['building'].errors['minlength'] ">
+                        Minimum length must be 3 characters**
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>City:</label>
+                <input formControlName="city" type="text" class="form-control" id="city" name="city" 
+                [(ngModel)]="user.address.city">
+                <div *ngIf="f['city'].touched && f['city'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['city'].errors &&  f['city'].errors['required'] ">
+                        City is mandatory**
+                    </div>
+                    <div *ngIf="f['city'].errors &&  f['city'].errors['minlength'] ">
+                        Minimum length must be 3 characters**
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>State:</label>
+                <input formControlName="state" type="text" class="form-control" id="state" name="state" 
+                [(ngModel)]="user.address.state">
+                <div *ngIf="f['state'].touched && f['state'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['state'].errors &&  f['state'].errors['required'] ">
+                        State is mandatory**
+                    </div>
+                    <div *ngIf="f['state'].errors &&  f['state'].errors['minlength'] ">
+                        Minimum length must be 3 characters**
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Pin Code:</label>
+                <input formControlName="pincode" type="tel" class="form-control" id="pin" name="pin" 
+                [(ngModel)]="user.address.pincode">
+                <div *ngIf="f['pincode'].touched && f['pincode'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['pincode'].errors &&  f['pincode'].errors['required'] ">
+                        Building is mandatory**
+                    </div>
+                    <div *ngIf="f['pincode'].errors &&  f['pincode'].errors['minlength'] ">
+                        Minimum length must be 6 characters**
+                    </div>
+                    <div *ngIf="f['pincode'].errors &&  f['pincode'].errors['maxlength'] ">
+                        Maximum length must be 6 characters**
+                    </div>
+                </div>
+            </div>
+            
+
+        
+       
+
+        <div class="row">
+
+       
+        </div>
+
+        
+   
+        <br>
+
+
+        
+            <button  [disabled]="form.invalid" class="btn btn-success " type="submit">Submit</button>
+       
+    </div>
+</form>
