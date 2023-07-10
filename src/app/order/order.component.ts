@@ -21,4 +21,16 @@ export class OrderComponent {
       }
     );
   }
+
+  cancelOrder(id: number, order: OrderDetails)
+  {
+    this.authService.cancelOrder(id, order).subscribe(
+      data=>
+      {
+        console.log('Order cancelled',data);
+        alert("Your order has been cancelled");
+        window.location.reload();
+      }
+    );
+  }
 }

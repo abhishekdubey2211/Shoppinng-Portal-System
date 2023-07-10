@@ -21,7 +21,7 @@ constructor(private authService: AuthService, private router: Router){}
       email:  new FormControl("",[Validators.required,Validators.email]),
       cont: new FormControl("",[Validators.required,Validators.maxLength(10),Validators.minLength(10),
         Validators.pattern("[6789]{1}[0-9]{9}")]),
-      password: new FormControl("",[Validators.required,Validators.minLength(3)]),
+      password: new FormControl("",[Validators.required,Validators.minLength(8),Validators.maxLength(15)]),
       building: new FormControl("",[Validators.required,Validators.minLength(3)]),
       city: new FormControl("",[Validators.required,Validators.minLength(3)]),
       state: new FormControl("",[Validators.required,Validators.minLength(3)]),

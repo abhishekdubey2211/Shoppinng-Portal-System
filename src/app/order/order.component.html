@@ -5,24 +5,26 @@
         <tr>
             <th>Order Id</th>
             <th>Order Date</th>
-            <!-- <th>Prouct Name</th> -->
+            <th>Prouct Name</th>
             <th>Quantity</th>
             <th>Total</th>
             <!-- <th>Customer Name</th> -->
             <th>Payment Mode</th>
             <th>Status</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let order of orders">
             <td>{{order.orderId}}</td>
             <td>{{order.orderDate}}</td>
-            <!-- <td>{{order.product.name}}</td> -->
+            <td>{{order.product.name}}</td>
             <td>{{order.quantity}}</td>
             <td>{{order.total}}</td>
             <!-- <td>{{order.user.name}}</td> -->
             <td>{{order.paymentMode}}</td>
             <td>{{order.status}}</td>
+            <td><button class="btn btn-danger" (click)="cancelOrder(order.orderId,order)">Cancel Order</button></td>
 
         </tr>
     </tbody>

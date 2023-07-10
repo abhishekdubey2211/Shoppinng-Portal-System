@@ -65,7 +65,10 @@
                     Password is mandatory**
                 </div>
                 <div *ngIf="f['password'].errors &&  f['password'].errors['minlength'] ">
-                    Minimum length must be 3 characters**
+                    Minimum length must be 8 characters**
+                </div>
+                <div *ngIf="f['password'].errors &&  f['password'].errors['maxlength'] ">
+                    Maximum length must be 15 characters**
                 </div>
             </div>
         </div>

@@ -10,6 +10,6 @@ export class OrderDetails {
     paymentMode !: String;
     status !: String;
 
-    // product: Product = new Product();
-    // user: User = new User();
+     product : Product = new Product();
+     user : User = new User();
 }

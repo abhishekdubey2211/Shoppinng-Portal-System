@@ -7,6 +7,9 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { OrderComponent } from './order/order.component';
+import { ProductUserComponent } from './product-user/product-user.component';
+import { BuyProductComponent } from './buy-product/buy-product.component';
+import { ReddirectproductsComponent } from './reddirectproducts/reddirectproducts.component';
 
 const routes: Routes = [
   {path:'home', component:HomeComponent},
@@ -16,6 +19,9 @@ const routes: Routes = [
   {path:'updateProduct/:id', component:UpdateProductComponent},
   {path:'viewProduct/:id', component:ProductDetailsComponent},
   {path:'order', component:OrderComponent},
+  {path:'prodUser', component:ProductUserComponent},
+  {path:'reProd/:id', component:ReddirectproductsComponent},
+  {path:'buy/:id', component:BuyProductComponent},
   {path:'', redirectTo:'home', pathMatch:"full"}
 ];
 

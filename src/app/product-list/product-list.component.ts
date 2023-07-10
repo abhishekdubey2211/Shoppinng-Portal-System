@@ -10,13 +10,20 @@ import { Router } from '@angular/router';
 })
 export class ProductListComponent implements OnInit{
   products: Product[] | undefined;
-
+  dummyArray: Product[] | undefined;
+searchType !: string;
   constructor(private authService : AuthService, private router: Router){}
 
   ngOnInit(): void {
+   this.getAllProducts();
+  }
+
+  getAllProducts()
+  {
     this.authService.getAllProducts().subscribe(
       data=>{
         this.products = data;
+        this.dummyArray = data;
       }
     );
   }
@@ -42,4 +49,24 @@ export class ProductListComponent implements OnInit{
     this.router.navigate(['viewProduct',id]);
   }
 
+  addProduct()
+  {
+    this.router.navigate(['addProduct']);
+  }
+
+  search()
+  {
+    this.products=this.dummyArray;
+    if(this.searchType.length == 0) {
+      this.getAllProducts();
+   
+    }
+
+    
+      this.products = this.products?.filter(c => { 
+      
+        return c.productType.toString().toLowerCase().includes(this.searchType.toLowerCase());
+      })  
+    
+  }
 }

@@ -39,7 +39,6 @@ id!: number;
       name: new FormControl("",[Validators.required,Validators.minLength(3)]),
       stock: new FormControl("",[Validators.required,Validators.minLength(1),Validators.min(10)]),
       price: new FormControl("",[Validators.required,Validators.minLength(2),Validators.min(500)])
-  
     }
   );
   
