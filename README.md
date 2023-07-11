@@ -5,6 +5,8 @@
 
 ![Screenshot 2023-07-11 140319](https://github.com/abhishekdubey2211/Shoppinng-Portal-System/assets/100952143/9da775d7-9327-4116-a9b4-73eca3124733)
 
+![Screenshot 2023-07-11 181022](https://github.com/abhishekdubey2211/Shoppinng-Portal-System/assets/100952143/8e2150f0-01bf-4365-b79e-27b35ca8697e)
+
 ![Screenshot 2023-07-11 140346](https://github.com/abhishekdubey2211/Shoppinng-Portal-System/assets/100952143/6aa4d582-7504-4841-9e88-7a620c8d6e4f)
 
 ![Screenshot 2023-07-11 140412](https://github.com/abhishekdubey2211/Shoppinng-Portal-System/assets/100952143/8f558b54-dc0a-4044-8b89-54691da811e5)
